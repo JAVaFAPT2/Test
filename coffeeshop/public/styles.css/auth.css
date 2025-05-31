@@ -1,0 +1,107 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap');
+
+body {
+  margin: 0;
+  font-family: 'Inter', sans-serif;
+  background: linear-gradient(135deg, #a76a47, #4e2d1c);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  color: #fff;
+}
+
+.container {
+  background: rgba(255 255 255 / 0.1);
+  backdrop-filter: blur(10px);
+  box-shadow: 0 8px 32px rgb(0 0 0 / 0.2);
+  border-radius: 16px;
+  padding: 3rem 3.5rem;
+  max-width: 420px;
+  width: 100%;
+}
+
+h2 {
+  margin-bottom: 1.5rem;
+  font-weight: 600;
+  font-size: 1.75rem;
+  text-align: center;
+  color: #f0f0f0;
+}
+
+label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-weight: 500;
+  font-size: 0.9rem;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"] {
+  width: 100%;
+  padding: 0.75rem 1rem;
+  border-radius: 10px;
+  border: none;
+  margin-bottom: 1.4rem;
+  font-size: 1rem;
+  font-family: 'Inter', sans-serif;
+  outline: none;
+  transition: box-shadow 0.3s ease;
+  box-sizing: border-box;
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="password"]:focus {
+  box-shadow: 0 0 8px 2px #683018;
+}
+
+button.btn-submit {
+  width: 100%;
+  padding: 0.85rem;
+  font-weight: 600;
+  font-size: 1.1rem;
+  background: #8e4521;
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  color: #fafafa;
+  box-shadow: 0 0 12px #553907aa;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+button.btn-submit:hover {
+  background: #ce6446;
+  box-shadow: 0 0 20px #95714bd1;
+}
+
+.toggle-text {
+  margin-top: 1rem;
+  text-align: center;
+  font-size: 0.95rem;
+  color: #ddd;
+}
+
+.toggle-text a {
+  color: #9c4d29;
+  text-decoration: none;
+  font-weight: 600;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+.toggle-text a:hover {
+  color: #7e3f12;
+}
+
+.error-message {
+  color: #ff6b6b;
+  font-size: 0.9rem;
+  margin-bottom: 1rem;
+  display: none;
+  background: rgba(255, 0, 0, 0.1);
+  padding: 10px;
+  border-radius: 8px;
+  text-align: center;
+}

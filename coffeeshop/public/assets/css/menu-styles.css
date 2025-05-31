@@ -1,0 +1,334 @@
+/* VelVet Coffee Menu Styles */
+:root {
+    --primary-brown: #3b2a20;  /* Dark brown for header background */
+    --secondary-brown: #4e392d; /* Lighter brown for secondary elements */
+    --accent-gold: #c8a27d;    /* Gold accent color */
+    --text-light: #e6ded5;     /* Light text color */
+    --bg-light: #f9f4f0;       /* Light background color */
+    --card-bg: #ffffff;        /* Card background */
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Arial, sans-serif;
+    background-color: var(--primary-brown);
+    color: var(--text-light);
+}
+
+.menu-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 100px 20px 60px;
+}
+
+/* Menu Header Section */
+.menu-hero {
+    display: flex;
+    margin-bottom: 60px;
+    align-items: stretch;
+}
+
+.menu-intro {
+    background-color: var(--bg-light);
+    padding: 40px;
+    color: var(--primary-brown);
+    flex: 0 0 30%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.velvet-text {
+    font-size: 54px;
+    font-weight: 900;
+    line-height: 1;
+    margin: 0;
+    color: var(--primary-brown);
+}
+
+.menu-heading {
+    font-size: 54px;
+    font-weight: 900;
+    line-height: 1;
+    margin: 0 0 20px 0;
+    color: var(--primary-brown);
+}
+
+.menu-description {
+    font-size: 16px;
+    line-height: 1.6;
+    color: var(--primary-brown);
+}
+
+/* Product Grid */
+.product-section {
+    margin-bottom: 60px;
+}
+
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+}
+
+.product-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    transition: transform 0.3s;
+}
+
+.product-card:hover {
+    transform: translateY(-10px);
+}
+
+.product-image {
+    width: 100%;
+    height: 240px;
+    overflow: hidden;
+    border-radius: 10px;
+    margin-bottom: 15px;
+}
+
+.product-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s;
+}
+
+.product-card:hover .product-image img {
+    transform: scale(1.1);
+}
+
+.product-title {
+    font-size: 24px;
+    font-weight: normal;
+    margin: 0;
+    color: var(--text-light);
+}
+
+.product-description {
+    margin-top: 10px;
+    color: var(--accent-gold);
+    font-weight: normal;
+    font-size: 16px;
+}
+
+.product-price {
+    margin-top: 5px;
+    font-weight: bold;
+    color: var(--text-light);
+}
+
+.add-to-cart {
+    margin-top: 15px;
+    background-color: var(--accent-gold);
+    color: var(--primary-brown);
+    border: none;
+    padding: 8px 20px;
+    border-radius: 30px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.3s;
+}
+
+.add-to-cart:hover {
+    background-color: var(--text-light);
+}
+
+/* Category Headers */
+.category-title {
+    font-size: 36px;
+    margin: 40px 0 30px;
+    color: var(--text-light);
+    text-align: center;
+    position: relative;
+}
+
+.category-title::after {
+    content: "";
+    display: block;
+    width: 60px;
+    height: 3px;
+    background-color: var(--accent-gold);
+    margin: 10px auto 0;
+}
+
+/* View All Button */
+.view-all-btn {
+    display: block;
+    margin: 40px auto 0;
+    background-color: transparent;
+    color: var(--text-light);
+    border: 2px solid var(--accent-gold);
+    padding: 12px 30px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.view-all-btn:hover {
+    background-color: var(--accent-gold);
+    color: var(--primary-brown);
+}
+
+/* Cart Modal */
+.cart-modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    display: none;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+}
+
+.cart-content {
+    background-color: var(--bg-light);
+    width: 90%;
+    max-width: 500px;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.cart-header {
+    background-color: var(--primary-brown);
+    color: var(--text-light);
+    padding: 15px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.cart-header h3 {
+    margin: 0;
+}
+
+.close-cart {
+    background: none;
+    border: none;
+    color: var(--text-light);
+    font-size: 24px;
+    cursor: pointer;
+}
+
+.cart-items {
+    max-height: 300px;
+    overflow-y: auto;
+    padding: 20px;
+}
+
+.cart-item {
+    display: flex;
+    margin-bottom: 15px;
+    padding-bottom: 15px;
+    border-bottom: 1px solid #e0e0e0;
+}
+
+.cart-item-image {
+    width: 70px;
+    height: 70px;
+    border-radius: 5px;
+    overflow: hidden;
+    margin-right: 15px;
+}
+
+.cart-item-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.cart-item-details {
+    flex-grow: 1;
+}
+
+.cart-item-title {
+    font-weight: bold;
+    margin-bottom: 5px;
+    color: var(--primary-brown);
+}
+
+.cart-item-price {
+    color: var(--accent-gold);
+}
+
+.cart-footer {
+    padding: 20px;
+    border-top: 1px solid #e0e0e0;
+    background-color: #f0f0f0;
+}
+
+.cart-total {
+    display: flex;
+    justify-content: space-between;
+    font-weight: bold;
+    margin-bottom: 15px;
+    color: var(--primary-brown);
+}
+
+.checkout-btn {
+    display: block;
+    width: 100%;
+    padding: 12px;
+    background-color: var(--primary-brown);
+    color: var(--text-light);
+    border: none;
+    border-radius: 5px;
+    text-align: center;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.checkout-btn:hover {
+    background-color: var(--accent-gold);
+    color: var(--primary-brown);
+}
+
+/* Media Queries */
+@media (max-width: 992px) {
+    .product-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .menu-hero {
+        flex-direction: column;
+    }
+
+    .menu-intro {
+        flex: auto;
+        padding: 30px;
+    }
+
+    .velvet-text, .menu-heading {
+        font-size: 42px;
+    }
+
+    .category-title {
+        font-size: 30px;
+    }
+}
+
+@media (max-width: 576px) {
+    .product-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .menu-container {
+        padding: 80px 15px 40px;
+    }
+
+    .velvet-text, .menu-heading {
+        font-size: 36px;
+    }
+}

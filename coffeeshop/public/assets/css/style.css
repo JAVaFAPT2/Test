@@ -1,0 +1,220 @@
+/*
+ * Brew Haven Coffee Shop - Custom Styles
+ */
+
+/* Global styles */
+:root {
+    --primary-color: #5d4037;
+    --secondary-color: #8d6e63;
+    --accent-color: #ff6d00;
+    --light-color: #f5f5f5;
+    --dark-color: #212121;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    color: #333;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    background-color: #f9f7f5;
+}
+
+/* Navbar customization */
+.navbar-brand {
+    font-family: 'Pacifico', cursive;
+    font-size: 1.5rem;
+}
+
+.navbar {
+    background-color: var(--primary-color) !important;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Hero section */
+.hero-section {
+    background-color: #f5f5f5;
+    padding: 2rem 0;
+    margin-bottom: 2rem;
+}
+
+/* Cards */
+.card {
+    transition: transform 0.3s, box-shadow 0.3s;
+    margin-bottom: 1.5rem;
+    border: none;
+    border-radius: 0.5rem;
+    overflow: hidden;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+.card-img-top {
+    height: 200px;
+    object-fit: cover;
+}
+
+.category-card {
+    text-align: center;
+    padding: 1rem;
+}
+
+.category-icon {
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+}
+
+.testimonial-card {
+    background-color: #fff;
+    border-radius: 0.5rem;
+}
+
+/* Buttons */
+.btn-primary {
+    background-color: var(--primary-color);
+    border-color: var(--primary-color);
+}
+
+.btn-primary:hover {
+    background-color: var(--secondary-color);
+    border-color: var(--secondary-color);
+}
+
+.btn-outline-primary {
+    color: var(--primary-color);
+    border-color: var(--primary-color);
+}
+
+.btn-outline-primary:hover {
+    background-color: var(--primary-color);
+    border-color: var(--primary-color);
+}
+
+.btn-success {
+    background-color: #43a047;
+    border-color: #43a047;
+}
+
+/* Footer */
+footer {
+    background-color: var(--dark-color) !important;
+    margin-top: auto;
+}
+
+footer a {
+    color: #ccc;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+footer a:hover {
+    color: white;
+}
+
+/* Forms */
+.form-control:focus {
+    border-color: var(--secondary-color);
+    box-shadow: 0 0 0 0.25rem rgba(141, 110, 99, 0.25);
+}
+
+/* Product cards */
+.product-card .card-img-top {
+    transition: opacity 0.3s;
+}
+
+.product-card:hover .card-img-top {
+    opacity: 0.9;
+}
+
+/* Cart badge */
+.badge {
+    position: relative;
+    top: -10px;
+    right: -5px;
+    font-size: 0.7rem;
+}
+
+/* Responsive images */
+.img-fluid {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Admin dashboard */
+.admin-sidebar {
+    background-color: #f8f9fa;
+    padding: 1rem;
+    border-radius: 0.5rem;
+}
+
+.admin-sidebar .nav-link {
+    color: #333;
+    padding: 0.5rem 1rem;
+}
+
+.admin-sidebar .nav-link:hover {
+    background-color: #e9ecef;
+}
+
+.admin-sidebar .nav-link.active {
+    background-color: var(--primary-color);
+    color: white;
+}
+
+/* Media queries */
+@media (max-width: 767.98px) {
+    .card-img-top {
+        height: 180px;
+    }
+
+    .navbar-brand {
+        font-size: 1.2rem;
+    }
+}
+
+/* Animation */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.fadeIn {
+    animation: fadeIn 0.5s ease-in-out;
+}
+
+/* Page transitions */
+.container {
+    animation: fadeIn 0.5s;
+}
+
+/* Custom error and success messages */
+.alert {
+    border-radius: 0.5rem;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--secondary-color);
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: var(--primary-color);
+}
